@@ -27,7 +27,7 @@ The map is powered by Leaflet, and GeoJSON data is sourced from multiple provide
 ### Online demo
 A live demo of the application is available at [https://jricardo27.github.io/online_trip_explorer/](https://jricardo27.github.io/online_trip_explorer/).
 
-![SVG Image](public/docs/img/online_trip_explorer_qr.svg)
+![SVG Image](docs/img/online_trip_explorer_qr.svg)
 
 While the application can run on mobile devices, it is not yet optimized for mobile use.
 
@@ -38,9 +38,9 @@ The interface is straightforward, with a layer control in the top-right corner a
 
 |                                                                                                |                                                                               |
 |------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| **OpenStreet Map** ![image](public/docs/img/openstreetmap_layer.webp)                          | **CyclOSM (slow to load)** ![image](public/docs/img/cyclosm_layer.webp)              |
-| **Esri World Imagery** ![image](public/docs/img/esri_world_imagery_layer.webp)                 | **Esri World Street Map** ![image](public/docs/img/esri_world_street_map_layer.webp) |
-| **Esri World Topographic Map** ![image](public/docs/img/esri_world_topographic_map_layer.webp) |                                                                               |
+| **OpenStreet Map** ![image](docs/img/openstreetmap_layer.webp)                          | **CyclOSM (slow to load)** ![image](docs/img/cyclosm_layer.webp)              |
+| **Esri World Imagery** ![image](docs/img/esri_world_imagery_layer.webp)                 | **Esri World Street Map** ![image](docs/img/esri_world_street_map_layer.webp) |
+| **Esri World Topographic Map** ![image](docs/img/esri_world_topographic_map_layer.webp) |                                                                               |
 
 
 
@@ -48,19 +48,19 @@ The interface is straightforward, with a layer control in the top-right corner a
 On the same layer control, users can select one or multiple data sources, such as:
 
 National Parks in Western Australia
-![image](public/docs/img/national_parks.webp)
+![image](docs/img/national_parks.webp)
 
 
 #### Saved POIs
 POIs can be saved by right-clicking on them or adding them from their popup menu. Users can also right-click on any point on the map to save it as a POI with
 a custom name.
 
-| ![image](public/docs/img/context_menu_map.webp) | ![image](public/docs/img/poi_popup.webp) |
+| ![image](docs/img/context_menu_map.webp) | ![image](docs/img/poi_popup.webp) |
 |-------------------------------------------------|-----------------------------------|
 
 The saved POIs can be accessed by opening the hamburger menu in the top-left corner of the map, next to the zoom controls.
 
-| ![image](public/docs/img/saved_poi_list.webp) | ![image](public/docs/img/context_menu_category.webp) |
+| ![image](docs/img/saved_poi_list.webp) | ![image](docs/img/context_menu_category.webp) |
 |-----------------------------------------------|-----------------------------------------------|
 
 By default, only the *ALL* category is present, but users can add custom categories, such as *FIRST DAY* and *SECOND DAY*, by right-clicking on the left side
@@ -68,7 +68,7 @@ of the drawer. Categories can be rearranged, deleted, or renamed, except for the
 
 POI information can be viewed by clicking on them, and the *Add/Edit Notes* button toggles the notes editor.
 
-| ![image](public/docs/img/poi_drawer_info.webp) | ![image](public/docs/img/poi_drawer_info_and_editor.webp)  |
+| ![image](docs/img/poi_drawer_info.webp) | ![image](docs/img/poi_drawer_info_and_editor.webp)  |
 |------------------------------------------------|-----------------------------------------------------|
 
 
@@ -82,4 +82,4 @@ the converted MultiLineStrings are shown as tracks.
 Google Earth does not have this limitation, and in the future, it may be possible to select whether to export a KML including polygons or not.
 
 
-![image](public/docs/img/export_menu.webp)
+![image](docs/img/export_menu.webp)

@@ -29,12 +29,14 @@
 
         // Store the referrer for potential back-navigation
         if (document.referrer && document.referrer !== location.href) {
-            sessionStorage.setItem("referrer", document.referrer);
+            sessionStorage.setItem('referrer', document.referrer);
         }
 
-        // Redirect to the root with the path in the hash
-        // e.g., /online_trip_explorer/victoria -> /online_trip_explorer/#/victoria
-        window.location.replace("/online_trip_explorer/#" + segment + searchParams);
+        // Store the current URL state before redirect
+        sessionStorage.setItem('redirectUrl', segment + searchParams);
+
+        // Redirect with the full path and query parameters
+        window.location.replace('/online_trip_explorer/#' + segment + searchParams);
     </script>
 </head>
 <body>

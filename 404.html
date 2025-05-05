@@ -19,10 +19,13 @@
          * 3. We redirect to the root with a hash (#) containing the intended route
          * 4. The React app (using HashRouter) then handles the route correctly
          */
+        // Mark that we're in the middle of a redirect
+        sessionStorage.setItem("isRedirecting", "true");
 
-        // Extract the path segment after /online_trip_explorer
-        // e.g., /online_trip_explorer/victoria -> /victoria
-        const segment = window.location.pathname.replace("/online_trip_explorer", "");
+        // Extract the path segment and query parameters
+        const url = new URL(window.location.href);
+        const segment = url.pathname.replace('/online_trip_explorer', '');
+        const searchParams = url.search; // This will include the ?fresh=true if present
 
         // Store the referrer for potential back-navigation
         if (document.referrer && document.referrer !== location.href) {
@@ -31,7 +34,7 @@
 
         // Redirect to the root with the path in the hash
         // e.g., /online_trip_explorer/victoria -> /online_trip_explorer/#/victoria
-        window.location.replace("/online_trip_explorer/#" + segment);
+        window.location.replace("/online_trip_explorer/#" + segment + searchParams);
     </script>
 </head>
 <body>

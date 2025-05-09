@@ -30,7 +30,9 @@ jobs:
         env:
           VITE_GA_MEASUREMENT_ID: ${{ secrets.VITE_GA_MEASUREMENT_ID }}
         run: |
+          echo "Replacing GA ID..."
           sed -i "s/__GA_ID__/$VITE_GA_MEASUREMENT_ID/g" env.js
+          cat ./env.js
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

@@ -1,3 +1,3 @@
 window.RUNTIME_CONFIG = {
-  VITE_GA_MEASUREMENT_ID: '__GA_ID__'
+  GA_MEASUREMENT_ID: '__GA_ID__'
 }
